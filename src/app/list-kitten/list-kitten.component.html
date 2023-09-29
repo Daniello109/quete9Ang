@@ -1,0 +1,8 @@
+
+<ng-container *ngIf="(kittenList.length>0);"> List of kittens
+ 
+    <li *ngFor="let everyKitten of kittenList">{{everyKitten}}</li><!-- Se crea una directiva ngFor para recorrer la lista y mostrar cada onomatipia.  EL valor de la interpolarización de onomatopia == al valor del elemento everyOnomatopia del bucle-->
+  </ng-container><br />
+  
+   <app-create-kitten>(kittenformInfo)="onReceiveKittenInfo($event)"></app-create-kitten>    <!-- esta función que creamos era para vincular la información del emit.value del elemento hijo con el elemento padre. Recuperamos el valor del objeto evento que proviene de la función sendOnomatopiaToParent y es lo que utilizaremos para añadirlo y mostralo en la lista -->
+   <button (click)="check()">Hello</button>

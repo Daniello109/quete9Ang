@@ -1,0 +1,22 @@
+<form class="form-group" [formGroup]="kittenform" (ngSubmit)="onSubmit();"> 
+    <label for="name">Name : 
+    <input  type="text" formControlName="name">
+    </label> 
+    
+    <label for="race">Race : 
+    <input  type="text" formControlName="race">
+    </label>
+    
+    <label for="dateOfBirth">Date of Birth : </label>
+    <input type="number" formControlName="dateOfBirth">
+      
+    <label for="photo">Photo url: </label>
+    <input type="text" formControlName="photo">
+    
+
+    
+    <p>Complete the form to enable button.</p>
+    <button type="submit" [disabled]="!kittenform.valid">Submit</button>
+    
+    </form>
+    
